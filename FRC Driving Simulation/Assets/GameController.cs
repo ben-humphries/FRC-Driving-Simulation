@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -9,16 +10,22 @@ public class GameController : MonoBehaviour {
 
 	public ChassisController chassisController;
 
+	bool pauseMenuEnabled = false;
+
 	// Use this for initialization
 	void Start () {
-		pauseMenuCanvas.enabled = false;
+		pauseMenuEnabled = false;
+
+		pauseMenuCanvas.gameObject.SetActive (pauseMenuEnabled);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
 		if (Input.GetKeyDown (KeyCode.Escape)) {
-			pauseMenuCanvas.enabled = !pauseMenuCanvas.enabled;
+			pauseMenuEnabled = !pauseMenuEnabled;
+			pauseMenuCanvas.gameObject.SetActive (pauseMenuEnabled);
+
 
 			chassisController.paused = !chassisController.paused;
 		}
