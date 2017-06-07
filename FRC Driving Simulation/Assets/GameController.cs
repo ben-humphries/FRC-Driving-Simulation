@@ -39,10 +39,19 @@ public class GameController : MonoBehaviour {
 
 		string[] joystickNames = Input.GetJoystickNames();
 
-		print ("aa" + joystickNames [1] + "aa");
+		string rightJoystick = "No joystick connected.";
+		string leftJoystick = "No joystick connected.";
 
-		string rightJoystick = joystickNames [0] != null && joystickNames[0].Length > 0 ? joystickNames [0] : "No joystick connected.";
-		string leftJoystick  = joystickNames [1] != null && joystickNames[1].Length > 0 ? joystickNames [1] : "No joystick connected.";
+		if (joystickNames.Length == 1) {
+
+			rightJoystick = joystickNames [0] != null && joystickNames [0].Length > 0 ? joystickNames [0] : "No joystick connected.";
+		} else {
+
+			rightJoystick = joystickNames [0] != null && joystickNames [0].Length > 0 ? joystickNames [0] : "No joystick connected.";
+			leftJoystick = joystickNames [1] != null && joystickNames [1].Length > 0 ? joystickNames [1] : "No joystick connected.";
+
+		}
+
 
 		t.text = "Right Joystick: " + rightJoystick + "\n" +
 				 "Left Joystick: " + leftJoystick;

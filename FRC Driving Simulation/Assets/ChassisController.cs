@@ -29,12 +29,14 @@ public class ChassisController : MonoBehaviour {
 	float lastAngularPosition;
 
 
+
 	void Start () {
 
 		rigidbody = GetComponent<Rigidbody> ();
 
 		lastLinearPosition = Vector3.zero;
 		lastAngularPosition = 0f;
+		paused = false;
 		
 	}
 	
@@ -48,26 +50,30 @@ public class ChassisController : MonoBehaviour {
 
 			if (driveMode == DriveModes.Tank) {
 
+
 				if (Mathf.Abs (Input.GetAxis ("VerticalLeft")) > joyDeadZone) {
 
 
-					Vector3 rotatePoint = transform.position + transform.TransformDirection (Vector3.right) * rotationOffset;
+					Vector3 rotatePoint = (transform.position) + transform.TransformDirection (Vector3.right) * rotationOffset;
 					Vector3 rotateAxis = transform.TransformDirection (Vector3.up);
 
-					Debug.DrawRay (rotatePoint, rotateAxis);
+					Debug.DrawRay (rotatePoint, rotateAxis * 10f, Color.red);
 
 					transform.RotateAround (rotatePoint, rotateAxis, -speedAngular * Input.GetAxis ("VerticalLeft") * Time.fixedDeltaTime * (squaredMovement ? Mathf.Abs (Input.GetAxis ("VerticalLeft")) : 1));
 
 				}
 				if (Mathf.Abs (Input.GetAxis ("VerticalRight")) > joyDeadZone) {
-					Vector3 rotatePoint = transform.position + transform.TransformDirection (Vector3.left) * rotationOffset;
+					Vector3 rotatePoint = (transform.position) + transform.TransformDirection (Vector3.left) * rotationOffset;
 					Vector3 rotateAxis = transform.TransformDirection (Vector3.up);
 
-					Debug.DrawRay (rotatePoint, rotateAxis);
+					Debug.DrawRay (rotatePoint, rotateAxis * 10f, Color.red);
+
 
 					transform.RotateAround (rotatePoint, rotateAxis, speedAngular * Input.GetAxis ("VerticalRight") * Time.fixedDeltaTime * (squaredMovement ? Mathf.Abs (Input.GetAxis ("VerticalRight")) : 1));
 
 				}
+					
+
 			} else if (driveMode == DriveModes.Mecanum) {
 			
 
