@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKeyDown (KeyCode.Escape)) {
+		if (Input.GetKeyDown (KeyCode.Escape) && !chassisController.finished) {
 			pauseMenuEnabled = !pauseMenuEnabled;
 			pauseMenuCanvas.gameObject.SetActive (pauseMenuEnabled);
 

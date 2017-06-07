@@ -8,6 +8,7 @@ public class ChassisController : MonoBehaviour {
 	public UIController uiController;
 
 	public Canvas PauseCanvas;
+	public Canvas FinishCanvas;
 
 	public float speedLinear = 10f;
 	public float speedAngular = 100f;
@@ -28,7 +29,12 @@ public class ChassisController : MonoBehaviour {
 	Vector3 lastLinearPosition;
 	float lastAngularPosition;
 
+	bool timerStarted = false;
+	float startTime;
+	Vector3 startPosition;
 
+	[HideInInspector]
+	public bool finished = false;
 
 	void Start () {
 
@@ -37,12 +43,19 @@ public class ChassisController : MonoBehaviour {
 		lastLinearPosition = Vector3.zero;
 		lastAngularPosition = 0f;
 		paused = false;
+
+		startTime = Time.time;
+		startPosition = transform.position;
+
+		if (FinishCanvas != null) {
+			FinishCanvas.gameObject.SetActive (false);
+		}
 		
 	}
 	
 	void FixedUpdate () {
 
-		if (!paused) {
+		if (!paused && !finished) {
 
 			/*
 		 * INPUT
@@ -82,7 +95,7 @@ public class ChassisController : MonoBehaviour {
 				}
 
 				if (Mathf.Abs (Input.GetAxis ("HorizontalRight")) > joyDeadZone) {
-					transform.Translate (Vector3.right * speedLinear / 5f * Input.GetAxis ("HorizontalRight") * Time.fixedDeltaTime * (squaredMovement ? Mathf.Abs (Input.GetAxis ("HorizontalRight")) : 1));
+					transform.Translate (Vector3.right * speedLinear / 2.5f * Input.GetAxis ("HorizontalRight") * Time.fixedDeltaTime * (squaredMovement ? Mathf.Abs (Input.GetAxis ("HorizontalRight")) : 1));
 				}
 
 				if (Mathf.Abs (Input.GetAxis ("TwistRight")) > joyDeadZone) {
@@ -101,6 +114,14 @@ public class ChassisController : MonoBehaviour {
 			uiController.UpdateVelocities (linearVelocity, angularVelocity);
 
 
+			if (!timerStarted && transform.position != startPosition) {
+				timerStarted = true;
+				startTime = Time.time;
+			}
+			if (timerStarted) {
+				uiController.UpdateTimer (Mathf.Round ((Time.time - startTime) * 100f) / 100f);
+			}
+
 		}
 	}
 
@@ -113,6 +134,16 @@ public class ChassisController : MonoBehaviour {
 
 		rigidbody.isKinematic = false;
 
+	}
+	void OnTriggerEnter(Collider col){
+
+		if(col.tag.Equals("Finish")){
+
+			timerStarted = false;
+			FinishCanvas.transform.GetChild (1).GetComponent<Text> ().text = "Time: " + (Time.time - startTime) + "s";
+			finished = true;
+			FinishCanvas.gameObject.SetActive (true);
+		}
 	}
 	public enum DriveModes{
 		Tank,

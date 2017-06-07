@@ -8,6 +8,9 @@ public class SceneController : MonoBehaviour {
 	public void SwitchScenes(string sceneName){
 		SceneManager.LoadScene (sceneName);
 	}
+	public void ReloadScene(){
+		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
+	}
 	public void MainMenu(){
 		SceneManager.LoadScene ("MainMenu");
 	}

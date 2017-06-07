@@ -26,5 +26,10 @@ public class UIController : MonoBehaviour {
 
 		t.text = "Drive Mode: " + driveMode;
 	}
+	public void UpdateTimer(float time){
+		Text t = transform.GetChild (2).GetComponent<Text> ();
+
+		t.text = "Time: " + time + "s";
+	}
 
 }
