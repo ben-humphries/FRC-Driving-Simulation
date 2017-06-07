@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObstacleMovement : MonoBehaviour {
 
+	public float travelTime = 1f;
 	public Vector3[] nodes;
 
 	Rigidbody r;
@@ -25,7 +26,7 @@ public class ObstacleMovement : MonoBehaviour {
 
 		if (nodes.Length > 0) {
 			if (lastNode != currentNode) {
-				StartCoroutine (MoveAndRotateToPoint (transform, transform.position, nodes [currentNode], transform.eulerAngles, startEuler, 1f));
+				StartCoroutine (MoveAndRotateToPoint (transform, transform.position, nodes [currentNode], transform.eulerAngles, startEuler, travelTime));
 				lastNode = currentNode;
 			}
 		} else {
