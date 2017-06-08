@@ -50,6 +50,16 @@ public class ChassisController : MonoBehaviour {
 		if (FinishCanvas != null) {
 			FinishCanvas.gameObject.SetActive (false);
 		}
+
+
+		//SETTINGS
+		squaredMovement = PlayerPrefs.GetInt ("SquaredMovement") == 1 ? true : false;
+		speedLinear = PlayerPrefs.GetFloat ("RobotSpeed");
+		speedAngular = speedLinear * 10f;
+		driveMode = PlayerPrefs.GetString ("DefaultDriveMode").Equals ("Tank") ? DriveModes.Tank : DriveModes.Mecanum;
+
+		uiController.UpdateDriveMode (PlayerPrefs.GetString ("DefaultDriveMode").Equals ("Tank") ? "Tank Drive" : "Mecanum Drive");
+		PauseCanvas.transform.GetChild (1).GetComponent<Dropdown> ().value = driveMode == DriveModes.Tank ? 0 : 1;
 		
 	}
 	

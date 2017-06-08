@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour {
 		if (joystickNames.Length == 1) {
 
 			rightJoystick = joystickNames [0] != null && joystickNames [0].Length > 0 ? joystickNames [0] : "No joystick connected.";
-		} else {
+		} else if(joystickNames.Length == 2){
 
 			rightJoystick = joystickNames [0] != null && joystickNames [0].Length > 0 ? joystickNames [0] : "No joystick connected.";
 			leftJoystick = joystickNames [1] != null && joystickNames [1].Length > 0 ? joystickNames [1] : "No joystick connected.";

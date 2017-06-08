@@ -22,9 +22,11 @@ public class UIController : MonoBehaviour {
 				 "Angular Velocity: " + angularVelocity + " rad/s";
 	}
 	public void UpdateDriveMode(string driveMode){
+
 		Text t = transform.GetChild (1).GetComponent<Text> ();
 
 		t.text = "Drive Mode: " + driveMode;
+
 	}
 	public void UpdateTimer(float time){
 		Text t = transform.GetChild (2).GetComponent<Text> ();
