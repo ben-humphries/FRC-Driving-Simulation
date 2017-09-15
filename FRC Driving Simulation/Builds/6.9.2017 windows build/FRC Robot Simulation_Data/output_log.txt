@@ -1,0 +1,98 @@
+Initialize engine version: 5.5.2f1 (3829d7f588f3)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics Family (ID=0xa16)
+    Vendor:   Intel
+    VRAM:     1136 MB
+    Driver:   10.18.15.4279
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Ben_Humphries\Documents\Unity Projects\FRC-Driving-Simulation\FRC Driving Simulation\Builds\6.9.2017 windows build\FRC Robot Simulation_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Ben_Humphries\Documents\Unity Projects\FRC-Driving-Simulation\FRC Driving Simulation\Builds\6.9.2017 windows build\FRC Robot Simulation_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Ben_Humphries\Documents\Unity Projects\FRC-Driving-Simulation\FRC Driving Simulation\Builds\6.9.2017 windows build\FRC Robot Simulation_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Ben_Humphries\Documents\Unity Projects\FRC-Driving-Simulation\FRC Driving Simulation\Builds\6.9.2017 windows build\FRC Robot Simulation_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Ben_Humphries\Documents\Unity Projects\FRC-Driving-Simulation\FRC Driving Simulation\Builds\6.9.2017 windows build\FRC Robot Simulation_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Ben_Humphries\Documents\Unity Projects\FRC-Driving-Simulation\FRC Driving Simulation\Builds\6.9.2017 windows build\FRC Robot Simulation_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Ben_Humphries\Documents\Unity Projects\FRC-Driving-Simulation\FRC Driving Simulation\Builds\6.9.2017 windows build\FRC Robot Simulation_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Ben_Humphries\Documents\Unity Projects\FRC-Driving-Simulation\FRC Driving Simulation\Builds\6.9.2017 windows build\FRC Robot Simulation_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Ben_Humphries\Documents\Unity Projects\FRC-Driving-Simulation\FRC Driving Simulation\Builds\6.9.2017 windows build\FRC Robot Simulation_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading D:\Ben_Humphries\Documents\Unity Projects\FRC-Driving-Simulation\FRC Driving Simulation\Builds\6.9.2017 windows build\FRC Robot Simulation_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.087 seconds
+Platform assembly: D:\Ben_Humphries\Documents\Unity Projects\FRC-Driving-Simulation\FRC Driving Simulation\Builds\6.9.2017 windows build\FRC Robot Simulation_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Ben_Humphries\Documents\Unity Projects\FRC-Driving-Simulation\FRC Driving Simulation\Builds\6.9.2017 windows build\FRC Robot Simulation_Data\Managed\System.dll (this message is harmless)
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initialized touch support.
+UnloadTime: 1.438256 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 18c4 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 7.366656 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 292.
+Total: 0.290060 ms (FindLiveObjects: 0.033468 ms CreateObjectMapping: 0.017849 ms MarkObjects: 0.230710 ms  DeleteObjects: 0.007586 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.537282 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 560.
+Total: 0.391805 ms (FindLiveObjects: 0.087910 ms CreateObjectMapping: 0.025436 ms MarkObjects: 0.268641 ms  DeleteObjects: 0.008924 ms)
+
+Joystick connected ("Logitech Extreme 3D").
+ 
+(Filename:  Line: 1351)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.167871 ms
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 295.
+Total: 0.870182 ms (FindLiveObjects: 0.047748 ms CreateObjectMapping: 0.048194 ms MarkObjects: 0.439553 ms  DeleteObjects: 0.333347 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.506044 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 386.
+Total: 0.353874 ms (FindLiveObjects: 0.043732 ms CreateObjectMapping: 0.018296 ms MarkObjects: 0.283813 ms  DeleteObjects: 0.007586 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.721136 ms
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 295.
+Total: 0.274888 ms (FindLiveObjects: 0.031683 ms CreateObjectMapping: 0.017849 ms MarkObjects: 0.211967 ms  DeleteObjects: 0.012494 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.515416 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 295.
+Total: 0.278012 ms (FindLiveObjects: 0.039269 ms CreateObjectMapping: 0.018742 ms MarkObjects: 0.211967 ms  DeleteObjects: 0.007586 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.421704 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 561.
+Total: 0.390466 ms (FindLiveObjects: 0.050425 ms CreateObjectMapping: 0.020081 ms MarkObjects: 0.310588 ms  DeleteObjects: 0.008478 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.923327 ms
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 296.
+Total: 1.822921 ms (FindLiveObjects: 0.072738 ms CreateObjectMapping: 0.062028 ms MarkObjects: 1.139716 ms  DeleteObjects: 0.547099 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.499797 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 296.
+Total: 0.286491 ms (FindLiveObjects: 0.039269 ms CreateObjectMapping: 0.018742 ms MarkObjects: 0.219553 ms  DeleteObjects: 0.008032 ms)
+
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.390020 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 619.
+Total: 0.395821 ms (FindLiveObjects: 0.061135 ms CreateObjectMapping: 0.020527 ms MarkObjects: 0.304787 ms  DeleteObjects: 0.008924 ms)
+
+Joystick connected ("Logitech Extreme 3D").
+ 
+(Filename:  Line: 1351)
+
